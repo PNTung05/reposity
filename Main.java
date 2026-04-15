@@ -16,8 +16,9 @@ public class Main {
         shapes.add(new Pyramid("P2"));
 
         Collections.sort(shapes);
-        for (Shape3D s : shapes)Ơ
+        for (Shape3D s : shapes){
         System.out.println(s.getName());
+        }
 
         System.out.println("\n===Render===");
         for (Shape3D s: shapes){
