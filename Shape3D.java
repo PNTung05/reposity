@@ -1,18 +1,9 @@
-abstract class Shape3D implements Comparable<Shape3D> {
-    String name;
-
-    Shape3D(String name){
-        this.name = name;
-    }
-    
+public abstract class Shape3D implements Comparable<Shape3D> {
+    String name, color;
+    double size;
+    Shape3D(String name, String color, double size){this.name=name;this.color=color;this.size=size;}
+    Shape3D(String name){this(name,"default",1);}
     public abstract void render();
-
-    public String getName(){
-        return name;
-    }
-
-    @Override
-    public int CompareTo(Shape3D other){
-        return this.name.compareTo(other.name);
-    }
+    @Override public String toString(){return getClass().getSimpleName()+"[name="+name+",color="+color+",dimension="+size+"]";}
+    @Override public int compareTo(Shape3D other){return name.compareTo(other.name);}
 }
